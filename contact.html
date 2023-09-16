@@ -26,34 +26,31 @@
     <div id="header"></div>
 
     <form action="#" method=get>
+        <h2>Warranty Request Form</h2>
+        <p></p>
         Name:
         <input type=text name=name id=name placeholder="John Doe">
         <p></p>
         Email:
         <input type=email name=email id=email placeholder="jd1234@nyu.edu">
         <p></p>
-        # of Tickets:
+        # of Products:
         <input type=number name=tickets id=tickets min=1 value="1">
         <p></p>
-        Credit Card Type:<br>
-        Visa: <input type=radio value=Visa name=cc id=cc>
-        Amex: <input type=radio value=AMEX name=cc id=cc>
+        Date of Lot Purchase:
+        <input type="date" name=date id=date>
         <p></p>
-        Ice Cream:<br>
-        Chocolate: <input type=checkbox value=Visa name=flavor id=flavor>
-        Vanilla: <input type=checkbox value=AMEX name=flavor id=flavor>
+        Order Number:
+        <input type="text" name=order id=order placeholder="#B654321">
         <p></p>
-        Select your state:
-        <select name=state id=state>
-            <option value="NY"> NY </option>
-            <option value="CA" selected> CA </option>
-            <option value="NJ"> NJ </option>
-            <option value="MA"> MA </option>
-        </select>
+        Select Warranty Method:<br>
+        Return: <input type=radio value=return name=method id=method>
+        Replace: <input type=radio value=replace name=method id=method>
         <p></p>
-        Enter your article text:<br>
-        <textarea name=com id=com rows=5 cols=45>bla bla bla</textarea>
+        Enter the problems regarding the products:<br>
+        <textarea name=com id=com rows=5 cols=45 placeholder="There is clay in my PC."></textarea>
         <p></p>
+        Provide a photo proof of issue:
         <input type=file>
         <p></p>
         <input type=submit value="Submit Info">
@@ -62,7 +59,7 @@
 
     <br>
 
-    <footer>Benjamin DeWeese van Schooneveld - 2023</footer> <!--To be replaced with import similar to header-->
+    <footer>© 2023 Benjamin DeWeese van Schooneveld</footer> <!--To be replaced with import similar to header-->
 </body>
 
 </html>

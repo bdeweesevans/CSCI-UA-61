@@ -5,7 +5,7 @@
 }
 
 form {
-    background-color: #f1f1f1; 
+    background-color: #f1f1f1; /*change these colors to something normal*/
     padding: 20px; 
     border-radius: 10px; 
     font-family: "NHGLt";
@@ -17,6 +17,7 @@ form {
 }
 
 form input[type="text"],
+form input[type="date"],
 form input[type="email"],
 form input[type="number"],
 form select,
@@ -72,6 +73,7 @@ form input[type="file"] {
         margin: 10px;
     }
     form input[type="text"],
+    form input[type="date"],
     form input[type="email"],
     form input[type="number"],
     form select,
