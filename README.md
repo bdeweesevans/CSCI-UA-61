@@ -1,3 +1,3 @@
 # web2
 Deployed at:
-https://www.bdeweesevans.com/web2
+https://i6.cims.nyu.edu/~bdd6280
