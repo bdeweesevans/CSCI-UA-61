@@ -1,3 +1,8 @@
+/*Thought I'd try and follow a tutorial on how to implement this, just for fun.
+this script only partially works, and does not turn the contact form to darkmode.
+Only works on the home page, and even then the CSS does not fully change the HTML
+as it should when darkmode is enabled.*/
+
 const toggleButton = document.getElementById('toggle-mode');
 const body = document.body;
 
