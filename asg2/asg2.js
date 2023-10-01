@@ -12,9 +12,9 @@ function change() { //Complete
     if ((clickCounter % 2) === 0) {
         element1.style.fontSize = "40px";
         element1.style.color = "#DD6E0F";
-        element1.style.border = "2px dotted white";
+        element1.style.border = "2px dotted gray";
 
-        element2.innerText = "keep clicking me to get a new random background color, change the title's color & font size, and the text of this button!";
+        element2.innerText = "keep clicking me to get a new random background color, change the title's color, font size & border, and the text of this button!";
 
         let randColor = Math.floor(Math.random() * colors.length);
         element3.style.backgroundColor = colors[randColor];
