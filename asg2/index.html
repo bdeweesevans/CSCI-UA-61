@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bdd6280</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<script>
+    $(function () {
+        $("#header").load("../header.html");
+    })
+</script>
+
+<body id="element3">
+    <h1 id="element1">Web Development 2023, Assignment 2</h1>
+
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="left-column">
+            <h2>Hey!</h2>
+            <p id="text1" onclick="swapT()">If you want, click this paragraph text in order to reveal a secret message!</p>
+            <p id="text2" style="display: none" onclick="swapT()">Ok, here's the secret. One of my cats knows that people use doorknobs to open doors, and so she attempts to paw at them when trying to get inside rooms. I'm scared. Will I be okay? Click me again to hide my secret, please.</p>
+            <br>
+
+            <button id="element2" onclick="change()" style="padding: 20px; margin-right: 20px; margin-left: 20px">change styles</button>
+            <script src="./asg2.js"></script>
+
+            <p id="element4">The current background color is "white".</p>
+        </div>
+        <div class="right-column">
+            <div class="image-container">
+                <img id="image1" src="../images/image1.jpg" alt="fountain" onclick="swapImg()">
+                <img id ="image3" src="../images/image3.jpg" alt="pool">
+            </div>
+            <div class="image-container">
+                <img id ="image2" src="../images/image2.jpg" alt="plane">
+                <img id ="image4" src="../images/image4.jpg" alt="twisters">
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+    <footer>© 2023 Benjamin DeWeese van Schooneveld</footer> <!--To be replaced with import similar to header-->
+
+</body>
+
+</html>
