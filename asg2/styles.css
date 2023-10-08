@@ -25,10 +25,6 @@ body {
     flex-direction: column;
 }
 
-body.mode2 {
-    background-color: darkseagreen;
-}
-
 h1 {
     font-family: "Ortica Bold";
     font-size: 32px;

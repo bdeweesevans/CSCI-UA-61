@@ -1,7 +1,7 @@
 //========================================
 var clickCounter = 0; // for change function
 //----------------------------------------
-function change() { //Complete
+function change() { //COMPLETE
     let element1 = document.getElementById('element1');
     let element2 = document.getElementById('element2');
     let element3 = document.getElementById('element3');
