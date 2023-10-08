@@ -39,7 +39,7 @@ function randArray() {  //COMPLETE - Prize application
     document.write("</body></html>");
 }
 //========================================
-function randImage() {  //INCOMPLETE (need different images) - Random image on load.
+function randImage() {  //COMPLETE- Random image on load.
     console.log("window has been reloaded and randImage() ran");
     let randomLoadImage = document.getElementById('randomLoadImage');
     let fileMatrix = ["random1", "random2", "random3", "random4", "random5"];
