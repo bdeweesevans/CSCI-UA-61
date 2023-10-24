@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bdd6280</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./formstyles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<script>
+    $(function () {
+        $("#header").load("../header.html");
+    })
+</script>
+
+<body id="element3">
+    <h1 id="element1">Web Development 2023, Assignment 4</h1>
+
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="left-column">
+            <form action="#" method=get>
+                <h2>What's your horoscope!</h2>
+                <p></p>
+                Date:
+                <input type="date" name=dateInput id="dateInput" placeholder="">
+
+                <script>
+                    // Get current date
+                    const today = new Date();
+                    // Format date to "YYYY-MM-DD"
+                    const formattedDate = today.toISOString().split('T')[0];
+                    // Set the max attribute of the date input
+                    document.getElementById('dateInput').max = formattedDate;
+                </script>
+
+                <p></p>
+                <input type=submit value="Submit for Horoscope">
+                <input type="reset" value="Reset">
+            </form>
+            <div style="text-align: center">
+                <img id="horoscopeImg" src="./images/image_Placeholder.jpg" alt="placeholder horoscope image" style="scale:90%">
+                <h3 id="bottomText">Input your birthday above.</h3>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="image-container">
+                <img id ="image3" src="../images/image3.jpg" alt="pool">
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+    <footer>© 2023 Benjamin DeWeese van Schooneveld</footer> <!--To be replaced with import similar to header-->
+
+    <script src="./asg4.js"></script>
+</body>
+
+</html>
