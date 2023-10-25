@@ -31,11 +31,8 @@
                 <input type="date" name=dateInput id="dateInput" placeholder="">
 
                 <script>
-                    // Get current date
                     const today = new Date();
-                    // Format date to "YYYY-MM-DD"
                     const formattedDate = today.toISOString().split('T')[0];
-                    // Set the max attribute of the date input
                     document.getElementById('dateInput').max = formattedDate;
                 </script>
 
