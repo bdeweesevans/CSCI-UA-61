@@ -13,10 +13,10 @@ f.addEventListener("submit", (event) => {
     if (sign.length > 0){
         document.images[0].src = "./images/image_" + sign + ".jpg";
         document.images[0].alt = sign + " image";
+        document.images[0].style.width = "50%"
         document.getElementById("bottomText").innerText = "Your sign is " + sign;
         document.images[1].src = "./images/openedCookie.jpg";
         document.getElementById("fortuneText").style.display = "";
-        console.log("we got here");
         document.getElementById("fortuneText").innerText = returnFortune(sign);
     }
 });
@@ -24,7 +24,10 @@ f.addEventListener("submit", (event) => {
 f.addEventListener("reset", (event) => {
     event.preventDefault();
     document.images[0].src = "./images/image_Placeholder.jpg";
+    document.images[0].style.width = "90%"
     document.getElementById("bottomText").innerText = "Input your birthday above.";
+    document.images[1].src = "./images/closedCookie.jpg";
+    document.getElementById("fortuneText").style.display = "none";
 });
 
 function returnHoroscope(birthDateObj) {
