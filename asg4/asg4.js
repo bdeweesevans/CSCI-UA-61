@@ -10,12 +10,14 @@ f.addEventListener("submit", (event) => {
     let birthDateObj = parseLocalDate(birthDateVal);
     let sign = returnHoroscope(birthDateObj);
 
-    console.log(sign);
     if (sign.length > 0){
         document.images[0].src = "./images/image_" + sign + ".jpg";
         document.images[0].alt = sign + " image";
         document.getElementById("bottomText").innerText = "Your sign is " + sign;
-        document.images[1].src = "./images/image_" + sign + ".jpg"; //need to change this image to the fortune.
+        document.images[1].src = "./images/openedCookie.jpg";
+        document.getElementById("fortuneText").style.display = "";
+        console.log("we got here");
+        document.getElementById("fortuneText").innerText = returnFortune(sign);
     }
 });
 
@@ -56,4 +58,28 @@ function returnHoroscope(birthDateObj) {
     }
 
     return sign;
+}
+
+function returnFortune(sign){
+    let fortunes = [
+    ["Capricorn", "Today, though, allow yourself a moment of vulnerability."],
+    ["Aquarius", "Today, they bring whispers of innovation and new ideas."],
+    ["Pisces", "Whether you're daydreaming or deep in slumber, pay attention to the symbols that come forth. "],
+    ["Aries", "Today might be the day you find clarity in a situation that's been clouding your mind."],
+    ["Taurus", "A walk outside could bring both relaxation and an unexpected solution to a problem."],
+    ["Gemini", "Whether you're resolving disputes or crafting tales, your voice will be impactful."],
+    ["Cancer", "Trust your gut feelings, especially when it comes to close relationships."],
+    ["Leo", "Chase what ignites your soul, but also remember to pause and appreciate the beauty in small moments."],
+    ["Virgo", "Embrace the unexpected, and you'll find there's a hidden pattern even in the chaos."],
+    ["Libra", "Today, share your calm and harmonious energy with those around you."],
+    ["Scorpio", "Dive into them, and you might discover treasures long forgotten."],
+    ["Sagittarius", "Even if you can't journey afar, seek out stories or experiences that transport you."],
+    ];
+
+    for (var i = 0; i < fortunes.length; i++){
+        if (sign == fortunes[i][0]) {
+            return fortunes[i][1];
+        } 
+    }
+    return;
 }
