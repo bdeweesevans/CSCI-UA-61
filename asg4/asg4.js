@@ -5,19 +5,20 @@ function parseLocalDate(dateString) {
 
 const f = document.forms[0];
 f.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent the form from being submitted to the server
+    event.preventDefault(); // Prevent the form from being submitted forcing a reload
     let birthDateVal = document.getElementById("dateInput").value;
     let birthDateObj = parseLocalDate(birthDateVal);
-    let sign = returnHoroscope(birthDateObj);
+    let sSign = sign(birthDateObj);
 
-    if (sign.length > 0){
-        document.images[0].src = "./images/image_" + sign + ".jpg";
-        document.images[0].alt = sign + " image";
-        document.images[0].style.width = "50%"
-        document.getElementById("bottomText").innerText = "Your sign is " + sign;
+    if (sSign.length > 0){
+        document.images[0].src = "./images/image_" + sSign + ".jpg";
+        document.images[0].alt = sSign + " image";
+        document.images[0].style.width = "50%";
+        document.getElementById("bottomText1").innerText = "Your birthday is " + birthDateObj.getDate() + "/" + birthDateObj.getMonth() + "/" + birthDateObj.getFullYear();
+        document.getElementById("bottomText2").innerText = "You are a " + sSign + "!";
         document.images[1].src = "./images/openedCookie.jpg";
         document.getElementById("fortuneText").style.display = "";
-        document.getElementById("fortuneText").innerText = returnFortune(sign);
+        document.getElementById("fortuneText").innerText = returnFortune(sSign);
     }
 });
 
@@ -25,19 +26,17 @@ f.addEventListener("reset", (event) => {
     event.preventDefault();
     document.images[0].src = "./images/image_Placeholder.jpg";
     document.images[0].style.width = "90%"
-    document.getElementById("bottomText").innerText = "Input your birthday above.";
+   document.getElementById("bottomText1").innerText = "Let's see what your horoscope is!";
+    document.getElementById("bottomText2").innerText = "Input your birthday above.";
     document.images[1].src = "./images/closedCookie.jpg";
     document.getElementById("fortuneText").style.display = "none";
 });
 
-function returnHoroscope(birthDateObj) {
+function sign(birthDateObj) {
     // day is broken, will return 31 if you selectthe first of the month
     let day = birthDateObj.getDate();
     let month = birthDateObj.getMonth();    //month works.
-    let sign = "";
-
-    //useless array, can be deleted later.
-    let starSigns = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"];    
+    let sSign = "";
 
     let theThingArray = [
         ["Capricorn", 12, 22, 1, 20], 
@@ -53,17 +52,16 @@ function returnHoroscope(birthDateObj) {
         ["Scorpio", 10, 23, 11, 21],
         ["Sagittarius", 11, 22, 12, 21]];
 
-    //we dont even need a nested loop for this. why she say we need??
     for (let i = 0; i < theThingArray.length; i++){
         if (((theThingArray[i][1] == month) && (day >= theThingArray[i][2])) || ((theThingArray[i][3] == month) && (day <= theThingArray[i][4]))) {
-            sign = theThingArray[i][0];
+            sSign = theThingArray[i][0];
         }
     }
 
-    return sign;
+    return sSign;
 }
 
-function returnFortune(sign){
+function returnFortune(sSign){
     let fortunes = [
     ["Capricorn", "Today, though, allow yourself a moment of vulnerability."],
     ["Aquarius", "Today, they bring whispers of innovation and new ideas."],
@@ -80,7 +78,7 @@ function returnFortune(sign){
     ];
 
     for (var i = 0; i < fortunes.length; i++){
-        if (sign == fortunes[i][0]) {
+        if (sSign == fortunes[i][0]) {
             return fortunes[i][1];
         } 
     }
