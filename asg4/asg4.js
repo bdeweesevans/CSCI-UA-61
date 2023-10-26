@@ -33,9 +33,8 @@ f.addEventListener("reset", (event) => {
 });
 
 function sign(birthDateObj) {
-    // day is broken, will return 31 if you selectthe first of the month
     let day = birthDateObj.getDate();
-    let month = birthDateObj.getMonth();    //month works.
+    let month = birthDateObj.getMonth();
     let sSign = "";
 
     let theThingArray = [
