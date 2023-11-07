@@ -13,7 +13,7 @@ document.getElementById('nodeButton').addEventListener('click', function () {
     const myList = document.getElementById('myList');
 
     myList.appendChild(createNavItem('Assignments', '/~bdd6280/header.html'));
-    myList.appendChild(createNavItem('Claim a prize on this page', '/~bdd6280/asg3.html'));
+    myList.appendChild(createNavItem('Claim a prize on this page!', '/~bdd6280/asg3/index.html'));
 
     const h3Tags = myList.querySelectorAll('a');
     h3Tags.forEach(function(anchor) {
