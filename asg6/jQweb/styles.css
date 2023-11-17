@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Ortica Bold";
+    src: url(../../fonts/OrticaBold700.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "NHGLt";
+    src: url(../../fonts/NHaasGroteskTXPro-55Rg.ttf);
+    font-weight: normal;
+}
+
+h1 {
+    font-family: "Ortica Bold";
+    color: rgba(77, 77, 77);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 300ms;
+}
+
+body {
+    background-image: url('../../images/image2.jpg');
+    background-size: cover;
+    color: white;
+    font-family: "NHGLt";
+}
+
+.tenor-gif-embed {
+    width: 560px;
+    height: auto;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    color: #E8E8E8;
+}
+
+.nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav .links {
+    color: #E8E8E8;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.mainContent {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mainContent p {
+    font-size: 20px;
+}
+
+.mainContent a {
+    font-size: 20px;
+}

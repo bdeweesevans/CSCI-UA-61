@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bdd6280</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./formstyles.css">
+    
+</head>
+
+<script>
+    $(function () {
+        $("#header").load("../header.html");
+    })
+</script>
+
+<body>
+    <h1 id="special">Web Development 2023, Assignment 6</h1>
+
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="left-column">
+            
+            <h1>Parts 1-5</h1>
+
+            <hr>
+            <h2>Part 1: Style Application</h2>
+            <button id="styleButton">Change Styles</button>
+            <p>Here's a sentence</p>
+            <p>And here's another</p>
+            <div class="highlight">
+                <p>One more!</p>
+                <p>And another...</p>
+            </div>
+
+            <hr>
+            <h2>Part 2: Image Application</h2>
+            <button id="hideButton">Hide</button>
+            <button id="showButton">Show</button>
+            <button id="fadeOutButton">Fade Out</button>
+            
+
+            <hr>
+            <h2>Part 3: Animation Application</h2>
+            <div>
+                <button id="animateButton">Animate</button>
+                <div id="animatedDiv" style="background-color: turquoise; position: relative; z-index:10; width: 100px; height: 100px; opacity: 1;"></div>
+            </div>
+            
+            <hr>
+            <h2>Part 4: Username & Password Application</h2>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <div id="demo"></div>
+            </div>
+
+            <hr>
+            <h2><a href="/~bdd6280/asg6/jQweb/index.html">Part 5: JQuery Designed Site</a></h2>
+            <hr>
+        </div>
+        <div class="right-column">
+            <div class="image-container">
+                <img src="../images/image1.jpg" id="image1" alt="image1">
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="./script.js"></script>
+
+    <footer>© 2023 Benjamin DeWeese van Schooneveld</footer> <!--To be replaced with import similar to header-->
+</body>
+
+</html>
