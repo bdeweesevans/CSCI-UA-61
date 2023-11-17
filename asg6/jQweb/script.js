@@ -32,7 +32,7 @@ $(function() {
                         'width': '560px',
                         'height': 'auto'
                     });
-                }, 100); 
+                }, 500); 
             });
         }
 
