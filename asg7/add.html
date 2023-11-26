@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formstyles.css">
+    <link rel="stylesheet" href="otherstyles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<script>
+    $(function () {
+        $("#header").load("../header.html");
+    })
+</script>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <form id="calculatorForm">
+            <input type="number" name="number1" placeholder="Enter a number" required>
+
+            <select name="operator" required>
+                <option value="" disabled selected>Select an operator</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+
+            <input type="number" name="number2" placeholder="Enter a number" required>
+
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="reset" class="reset-button">Clear</button>
+            <div id="calculatorResult"></div>
+        </form>
+
+        
+        <script>
+            document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                fetch('add.php', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                .then(response => response.text())
+                .then(text => document.getElementById('calculatorResult').innerHTML = text)
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
+
+    </div>
+    <br>
+    <footer>© 2023 Benjamin DeWeese van Schooneveld</footer>
+</body>
+</html>
