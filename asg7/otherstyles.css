@@ -1,0 +1,5 @@
+#madlibResult {
+    word-wrap: break-word; /* ensures long words do not overflow */
+    max-width: 300px; /* same as form for consistent layout */
+    margin-top: 20px; /* space between the form and the result */
+}

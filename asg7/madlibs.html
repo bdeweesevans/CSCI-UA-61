@@ -6,32 +6,49 @@
     <title>Madlib</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="formstyles.css">
+    <link rel="stylesheet" href="otherstyles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
+
+<script>
+    $(function () {
+        $("#header").load("../header.html");
+    })
+</script>
+
 <body>
+    <h1>Madlib</h1>
     <div class="container">
-        <h1>Madlib</h1>
-        <form method="post" action="madlibs.php">
+        <form id="madlibForm">
             <h3>Enter your Madlib Words Below!</h3>
-            <input type="text" name="noun1" placeholder="Enter a noun">
-            <input type="text" name="noun2" placeholder="Enter a noun">
-            <input type="text" name="noun3" placeholder="Enter a noun">
-            <input type="text" name="verb1" placeholder="Enter a verb">
-            <input type="text" name="verb2" placeholder="Enter a verb">
-            <input type="text" name="adjective1" placeholder="Enter an adjective">
-            <input type="text" name="adjective2" placeholder="Enter an adjective">
-            <input type="number" name="number" placeholder="Enter a number">
+            <input type="text" name="noun1" placeholder="Enter a noun" required>
+            <input type="text" name="noun2" placeholder="Enter a noun" required>
+            <input type="text" name="noun3" placeholder="Enter a noun" required>
+            <input type="text" name="verb1" placeholder="Enter a verb" required>
+            <input type="text" name="verb2" placeholder="Enter a verb" required>
+            <input type="text" name="adjective1" placeholder="Enter an adjective" required>
+            <input type="text" name="adjective2" placeholder="Enter an adjective" required>
+            <input type="number" name="number" placeholder="Enter a number" required>
             
             <button type="submit" class="submit-button">Submit</button>
             <button type="reset" class="reset-button">Clear</button>
+            <div id="madlibResult"></div>
         </form>
-        <div>
-        <?php if (!empty($_POST)): ?>
-            <div>
-                <h3>Here is your Madlib!</h3>
-                <p><?php include 'madlibs.php'; ?></p>
-            </div>
-        <?php endif; ?>
-        </div>
+        
+        <script>
+            document.getElementById('madlibForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                fetch('madlibs.php', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                .then(response => response.text())
+                .then(text => document.getElementById('madlibResult').innerHTML = text)
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
+
     </div>
     <br>
     <footer>© 2023 Benjamin DeWeese van Schooneveld</footer>
