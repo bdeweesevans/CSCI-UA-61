@@ -26,6 +26,6 @@
                 break;
         }
 
-        echo "Result: " . $result;
+        echo $number1 . " " . $operator . " " . $number2 . " = " . $result;
     }
 ?>
