@@ -10,13 +10,14 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
-<script>
-    $(function () {
-        $("#header").load("../header.html");
-    })
-</script>
-
 <body>
+    <div id="header"></div>
+    <script>
+        $(function () {
+            $("#header").load("../header.html");
+        });
+    </script>
+    
     <h1>Calculator</h1>
     <div class="container">
         <form id="calculatorForm">
