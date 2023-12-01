@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formstyles.css">
+    <link rel="stylesheet" href="otherstyles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<script>
+    $(function () {
+        $("#header").load("../header.html");
+    })
+</script>
+
+<body>
+    <h1>Quiz</h1>
+    <div class="container">
+        <form id="quizForm">
+            <h3>Pop Quiz!</h3>
+            
+            
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="reset" class="reset-button">Clear</button>
+            <div id="quizResult"></div>
+        </form>
+        
+        <script>
+            document.getElementById('quizForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                fetch('quiz.php', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                .then(response => response.text())
+                .then(text => document.getElementById('quizResult').innerHTML = text)
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
+
+    </div>
+    <br>
+    <footer>© 2023 Benjamin DeWeese van Schooneveld</footer>
+</body>
+</html>
