@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Madlib</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="formstyles.css">
     <link rel="stylesheet" href="otherstyles.css">
@@ -17,12 +17,23 @@
 </script>
 
 <body>
-    <h1>Quiz</h1>
+    <h1>Madlib</h1>
     <div class="container">
         <form id="quizForm">
             <h3>Pop Quiz!</h3>
-            
-            
+            <p>What is the capital of California?</p>
+            <input type="radio" name="q1" value="Sacramento">Sacramento<br>
+            <input type="radio" name="q1" value="Los Angeles">Los Angeles<br>
+            <input type="radio" name="q1" value="San Francisco">San Francisco<br>
+            <p>What is the most common fur color for cats?</p>
+            <input type="radio" name="q2" value="White">White<br>
+            <input type="radio" name="q2" value="Black">Black<br>
+            <input type="radio" name="q2" value="Orange">Orange<br>
+            <p>What is the population of Manhattan?</p>
+            <input type="radio" name="q3" value="1.6 million">1.6 million<br>
+            <input type="radio" name="q3" value="2.6 million">2.6 million<br>
+            <input type="radio" name="q3" value="3.6 million">3.6 million<br>
+            <br>
             <button type="submit" class="submit-button">Submit</button>
             <button type="reset" class="reset-button">Clear</button>
             <div id="quizResult"></div>

@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $addressState = $_POST['address-state'];
     $addressAreaCode = $_POST['address-areacode'];
     $ccNumber = $_POST['cc-number'];
-    $maskedNumber = substr($ccNumber, 0, -4) . str_repeat('x', 4);
+    $maskedNumber = str_repeat('X', strlen($ccNumber) - 4) . substr($ccNumber, -4);
 
     echo "<!DOCTYPE html><html><head><title>Receipt</title>";
     echo "<link rel='stylesheet' href='styles.css' type='text/css'></head><body>";
